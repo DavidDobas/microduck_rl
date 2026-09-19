@@ -845,8 +845,8 @@ requires-dist = [
     { name = "scipy", specifier = ">=1.16" },
     { name = "torch", marker = "platform_machine != 'aarch64' or sys_platform != 'linux'", specifier = "==2.9.1" },
     { name = "torch", marker = "platform_machine == 'aarch64' and sys_platform == 'linux'", specifier = "==2.9.1", index = "https://download.pytorch.org/whl/cu129" },
-    { name = "warp-lang", specifier = "==1.18.0.dev20260917", index = "https://pypi.nvidia.com/" },
-    { name = "warp-metal", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091702/warp_metal-1.18.0.dev2026091702-py3-none-macosx_11_0_arm64.whl" },
+    { name = "warp-lang", specifier = "==1.17.0" },
+    { name = "warp-metal", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.17.0.1/warp_metal-1.17.0.1-py3-none-macosx_11_0_arm64.whl" },
 ]
 
 [[package]]
@@ -2124,35 +2124,31 @@ wheels = [
 
 [[package]]
 name = "warp-lang"
-version = "1.18.0.dev20260917"
+version = "1.17.0"
 source = { registry = "https://pypi.nvidia.com/" }
 dependencies = [
     { name = "numpy" },
 ]
 wheels = [
-    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.18.0.dev20260917-py3-none-macosx_11_0_arm64.whl", hash = "sha256:0331d5a9160a976107d3b34e477aab6cd6045a206c89e0ee973edc1e7ef8e7aa" },
-    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.18.0.dev20260917-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:9f84a5c81541f1850da714ec3937bc2b407557edc0399835f2cb96277e31c40a" },
-    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.18.0.dev20260917-py3-none-manylinux_2_34_aarch64.whl", hash = "sha256:639dfea6686bb2d6dc20a1e3e058ce481e60c529808f6f752d225964b7b964a0" },
-    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.18.0.dev20260917-py3-none-win_amd64.whl", hash = "sha256:a0d36f8e0a978e1f4b5eed80f0dc232689050f5991246e3411a6a8d59603a037" },
+    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.17.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:f2fec43afb81caa2190c0b7fa3aaf4d869f3599839f0c40b9ead84331f91e993" },
+    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.17.0-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:47cd93636828dd16e55eeb4e77a0e3547b5fb0f383000a3d228629df68f28fd8" },
+    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.17.0-py3-none-manylinux_2_34_aarch64.whl", hash = "sha256:5051271048da956a8b94e2db9771ce60ce9591a3ac5bb49037f3d6812d1eea00" },
+    { url = "https://pypi.nvidia.com/warp-lang/warp_lang-1.17.0-py3-none-win_amd64.whl", hash = "sha256:ca35c82242a7553046f09023bbe56750b5c3d9af72625bd1a905a56d3189771d" },
 ]
 
 [[package]]
 name = "warp-metal"
-version = "1.18.0.dev2026091702"
-source = { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091702/warp_metal-1.18.0.dev2026091702-py3-none-macosx_11_0_arm64.whl" }
+version = "1.17.0.1"
+source = { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.17.0.1/warp_metal-1.17.0.1-py3-none-macosx_11_0_arm64.whl" }
 dependencies = [
-    { name = "packaging" },
     { name = "warp-lang" },
 ]
 wheels = [
-    { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091702/warp_metal-1.18.0.dev2026091702-py3-none-macosx_11_0_arm64.whl", hash = "sha256:d4c1499e86054af8c782ee5858d9e7d275c89afb6fbef1278b6e296cd00ac1a2" },
+    { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.17.0.1/warp_metal-1.17.0.1-py3-none-macosx_11_0_arm64.whl", hash = "sha256:bba506cfb64be3fe9d20a1e73a8d123da62669734b081e0087af0db09bc80c78" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "packaging", specifier = ">=23" },
-    { name = "warp-lang", specifier = "==1.18.0.dev20260917" },
-]
+requires-dist = [{ name = "warp-lang", specifier = "==1.17.0" }]
 
 [[package]]
 name = "wcwidth"

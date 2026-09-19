@@ -846,7 +846,7 @@ requires-dist = [
     { name = "torch", marker = "platform_machine != 'aarch64' or sys_platform != 'linux'", specifier = "==2.9.1" },
     { name = "torch", marker = "platform_machine == 'aarch64' and sys_platform == 'linux'", specifier = "==2.9.1", index = "https://download.pytorch.org/whl/cu129" },
     { name = "warp-lang", specifier = "==1.18.0.dev20260917", index = "https://pypi.nvidia.com/" },
-    { name = "warp-metal", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091701/warp_metal-1.18.0.dev2026091701-py3-none-macosx_11_0_arm64.whl" },
+    { name = "warp-metal", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091702/warp_metal-1.18.0.dev2026091702-py3-none-macosx_11_0_arm64.whl" },
 ]
 
 [[package]]
@@ -2138,14 +2138,14 @@ wheels = [
 
 [[package]]
 name = "warp-metal"
-version = "1.18.0.dev2026091701"
-source = { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091701/warp_metal-1.18.0.dev2026091701-py3-none-macosx_11_0_arm64.whl" }
+version = "1.18.0.dev2026091702"
+source = { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091702/warp_metal-1.18.0.dev2026091702-py3-none-macosx_11_0_arm64.whl" }
 dependencies = [
     { name = "packaging" },
     { name = "warp-lang" },
 ]
 wheels = [
-    { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091701/warp_metal-1.18.0.dev2026091701-py3-none-macosx_11_0_arm64.whl", hash = "sha256:9a49eadfcee06bd1a4bf0e3da73f22a35bb4e41fac6d15120b3350e11eca466f" },
+    { url = "https://github.com/DavidDobas/warp-metal/releases/download/v1.18.0.dev2026091702/warp_metal-1.18.0.dev2026091702-py3-none-macosx_11_0_arm64.whl", hash = "sha256:d4c1499e86054af8c782ee5858d9e7d275c89afb6fbef1278b6e296cd00ac1a2" },
 ]
 
 [package.metadata]

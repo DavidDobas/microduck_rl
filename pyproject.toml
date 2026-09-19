@@ -102,8 +102,10 @@ better-actuator-models = { git = "https://github.com/Rhoban/bam.git", branch = "
 # torch.cuda.device_count() == 0 and mjlab's select_gpus() indexes an empty
 # list -> `IndexError: list index out of range` before training even starts
 # (mjlab/utils/gpu.py:70). Route torch to PyTorch's CUDA index there.
-# cu129 (not cu130) matches the CUDA toolkit warp 1.12.0 bundles, so the
-# zero-copy warp<->torch interop stays on one runtime major version.
+# cu129 (not cu130) matches the CUDA 12.9 runtime that the warp-lang wheels on
+# PyPI are built with (true for 1.12.0 and still for 1.17.0; Warp's nightlies
+# moved to CUDA 13), so the zero-copy warp<->torch interop stays on one
+# runtime major version. Not re-tested on CUDA since the move to warp 1.17.0.
 # The marker keeps x86_64 (HF Jobs) on PyPI, where the wheel already bundles
 # CUDA via its nvidia-*-cu12 deps — that resolution is unchanged.
 torch = [

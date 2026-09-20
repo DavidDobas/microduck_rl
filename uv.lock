@@ -846,7 +846,7 @@ requires-dist = [
     { name = "torch", marker = "platform_machine != 'aarch64' or sys_platform != 'linux'", specifier = "==2.9.1" },
     { name = "torch", marker = "platform_machine == 'aarch64' and sys_platform == 'linux'", specifier = "==2.9.1", index = "https://download.pytorch.org/whl/cu129" },
     { name = "warp-lang", specifier = "==1.17.0" },
-    { name = "warp-metal", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/innate-inc/warp-metal/releases/download/v1.17.0.2/warp_metal-1.17.0.2-py3-none-macosx_11_0_arm64.whl" },
+    { name = "warp-metal", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://github.com/innate-inc/warp-metal/releases/download/v1.17.0.3/warp_metal-1.17.0.3-py3-none-macosx_11_0_arm64.whl" },
 ]
 
 [[package]]
@@ -2138,13 +2138,13 @@ wheels = [
 
 [[package]]
 name = "warp-metal"
-version = "1.17.0.2"
-source = { url = "https://github.com/innate-inc/warp-metal/releases/download/v1.17.0.2/warp_metal-1.17.0.2-py3-none-macosx_11_0_arm64.whl" }
+version = "1.17.0.3"
+source = { url = "https://github.com/innate-inc/warp-metal/releases/download/v1.17.0.3/warp_metal-1.17.0.3-py3-none-macosx_11_0_arm64.whl" }
 dependencies = [
     { name = "warp-lang" },
 ]
 wheels = [
-    { url = "https://github.com/innate-inc/warp-metal/releases/download/v1.17.0.2/warp_metal-1.17.0.2-py3-none-macosx_11_0_arm64.whl", hash = "sha256:f388d42470f8ef03dc8b74b447eb832bea0b7ce86e0f54822f2e6351b3731e78" },
+    { url = "https://github.com/innate-inc/warp-metal/releases/download/v1.17.0.3/warp_metal-1.17.0.3-py3-none-macosx_11_0_arm64.whl", hash = "sha256:fab8f30586105f5776a7e6ae88740ce943da204a2c8a7cdab4021f81cbbbaf57" },
 ]
 
 [package.metadata]

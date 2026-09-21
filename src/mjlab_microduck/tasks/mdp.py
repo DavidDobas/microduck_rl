@@ -4813,7 +4813,7 @@ class RelativeHeadingVelocityCommand(VelocityCommandCommandOnly):
         # Zero ang_vel slot; _update_command will fill it each step
         self.vel_command_b[env_ids, 2] = 0.0
 
-    def _update_command(self) -> None:
+    def _update_command(self, env_ids: torch.Tensor | None = None) -> None:  # mjlab >= 1.4 passes env_ids
         # Do NOT call super()._update_command() — it would run the heading
         # proportional controller and overwrite cmd[2] with a yaw rate.
         # Instead recompute heading error from scratch each step.
@@ -5213,7 +5213,7 @@ class GroundPickPhaseCommand(UniformVelocityCommand):
     def _resample_command(self, env_ids: torch.Tensor) -> None:
         pass  # Phase is continuous; no resampling needed
 
-    def _update_command(self) -> None:
+    def _update_command(self, env_ids: torch.Tensor | None = None) -> None:  # mjlab >= 1.4 passes env_ids
         pass  # Updated in compute()
 
     def _update_metrics(self) -> None:
@@ -5283,7 +5283,7 @@ class UniformPoseCommand(CommandTerm):
     def _update_metrics(self) -> None:
         pass
 
-    def _update_command(self) -> None:
+    def _update_command(self, env_ids: torch.Tensor | None = None) -> None:  # mjlab >= 1.4 passes env_ids
         pass
 
     def _resample_command(self, env_ids: torch.Tensor) -> None:
@@ -6512,7 +6512,7 @@ class SitStandCommand(UniformVelocityCommand):
         delta = self.vel_command_b[:, 0] - self._alpha
         self._alpha += torch.clamp(delta, -step, step)
 
-    def _update_command(self) -> None:
+    def _update_command(self, env_ids: torch.Tensor | None = None) -> None:  # mjlab >= 1.4 passes env_ids
         pass  # No heading controller / standing-env machinery.
 
     def _update_metrics(self) -> None:
